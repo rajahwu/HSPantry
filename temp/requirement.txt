@@ -1,0 +1,36 @@
+$tech_stack =
+vite
+vinxi?(new_tech: Compose full stack applications (and frameworks) using Vite, the versatile bundler and dev server, and Nitro, the universal production server. The core primitive in vinxi is a router.
+
+Inspired by the Bun.App API.
+
+Routers are handlers that tell us how specific URLs should be handled. We support various router modes: "static", "spa", "http", (and new ones can be added). Routers specify the handler file (entrypoint) to use for their base-prefixed routes. They can also specify a dir and style in some router modes to include a file system router that is provided to the handler. Routers specify their bundler configuration, via the build property. The routers tell the bundler what entry points to build, what vite plugins to use, etc., {  note: I \u2764 bun })
+react
+react query
+react router
+firebase
+tawilwindcss
+material ui
+
+$project requirements = 
+Set up a Next.js project with Material UI components
+
+Implement a Firebase backend for data storage
+
+Create a form to add, delete, and update pantry items
+
+Add a search or filter functionality to easily find items
+
+Create a presentable frontend design to display all pantry items
+
+Deploy to Vercel and use CI/CD
+
+By Friday 8/2 6pm EST, make a Reddit post titled [Project 2 | Name | Difficulty Level 1/2/3/4] with your deployed application link
+
+Bonus: Take images with mobile or browser camera
+
+Bonus: Use GPT Vision API or other LLMs to classify images and then update to Firebase
+
+Bonus: Use GCP Vertex AI and AutoML to classify 4-5 images of items near you and update Firebase
+
+Bonus: Add a recipe suggestion feature based on pantry contents using the OpenAI API or OpenRouter API
