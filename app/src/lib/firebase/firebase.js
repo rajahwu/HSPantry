@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, deleteDoc, doc, getFirestore, updateDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import { settings } from "../../../config";
 
 const firebaseConfig = {
@@ -12,19 +12,5 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_REACT_APP_FIREBASE_APP_ID ?? settings.appId,
 };
 
-// console.log("firebaseConfig", firebaseConfig);
-
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
-
-export const addPantyItem = async (item) => {
-  await addDoc(collection(db, "pantryItems"), item);
-};
-
-export const deletePantyItem = async (id) => {
-  await deleteDoc(doc(db, "pantryItems", id));
-};
-
-export const updatePantyItem = async (id, updatedItem) => {
-  await updateDoc(doc(db, "pantryItems", id), updatedItem);
-};

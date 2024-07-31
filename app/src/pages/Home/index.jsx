@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import Form from "../../components/Form";
 import Search from "../../components/Search";
-import { deletePantyItem, getPantryItems } from "../../lib/firebase";
+import { deletePantryItem, getPantryItems } from "../../lib/firebase";
 
 const Button = ({ text, onClick }) => (
   <button onClick={onClick}>{text}</button>
@@ -19,14 +19,8 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const refreshItems = async () => {
-    try {
       const data = await getPantryItems();
-      setItems(data || []); // Ensure items is always an array
-      console.log(data);
-    } catch (error) {
-      console.error("Failed to fetch pantry items:", error);
-      setItems([]); // Optional: Set items to empty array in case of error
-    }
+      setItems(data || []);
   };
 
   useEffect(() => {
@@ -87,7 +81,7 @@ const Home = () => {
                 {item.name}
               </Typography>
               <Button
-                onClick={() => deletePantyItem(item.id).then(refreshItems)}
+                onClick={() => deletePantryItem(item.id).then(refreshItems)}
                 text="Delete"
               />
             </Box>

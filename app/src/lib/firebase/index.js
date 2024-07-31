@@ -1,5 +1,4 @@
-import { addPantyItem, deletePantyItem, updatePantyItem } from './firebase';
-import { getPantryItems } from './query_functions';
+import { addPantryItem, deletePantryItem, getPantryItems, updatePantryItem } from './query_functions';
 
-export { addPantyItem, deletePantyItem, getPantryItems, updatePantyItem };
+export { addPantryItem, deletePantryItem, getPantryItems, updatePantryItem };
 

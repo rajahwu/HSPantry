@@ -1,16 +1,21 @@
 import { Box, Button, TextField } from "@mui/material";
+import PropTypes from "prop-types";
 import { useState } from "react";
-import { addPantyItem } from "../../lib/firebase";
+import { addPantryItem } from "../../lib/firebase";
 
 const Form = ({ refreshItems }) => {
   const [item, setItem] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await addPantyItem({ name: item });
+    await addPantryItem({ name: item });
     setItem("");
     refreshItems();
   };
+
+  Form.propTypes = {
+  refreshItems: PropTypes.func.isRequired,
+};
 
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
