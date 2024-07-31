@@ -1,5 +1,7 @@
-import Form from "./Form";
+import AddPantryItemForm from "./AddPantryItemForm";
+import ItemList from "./ItemList";
 
 export {
-    Form
+    AddPantryItemForm,
+    ItemList
 };

@@ -1,0 +1,81 @@
+Firestore Structure
+We'll need to model our data in Firestore to represent pantries and items. Here's a possible structure:
+Collections:
+Users:
+Each document represents a user.
+Fields:
+userId (string, unique identifier)
+email (string)
+name (string)
+pantries (array of pantry IDs)
+Pantries:
+Each document represents a pantry.
+Fields:
+pantryId (string, unique identifier)
+userId (string, reference to the user who owns the pantry)
+name (string, e.g., "Kitchen Pantry", "Office Snacks")
+items (array of item IDs)
+Items:
+Each document represents an item in a pantry.
+Fields:
+itemId (string, unique identifier)
+pantryId (string, reference to the pantry it belongs to)
+name (string, e.g., "Milk", "Cereal")
+quantity (number, e.g., 1, 2.5)
+unit (string, e.g., "gallon", "box")
+expiryDate (timestamp, optional)
+Example Data
+Let's say you have a user named "John Doe" with two pantries: "Kitchen Pantry" and "Office Snacks".
+Users:
+userId: "johndoe123"
+email: "john.doe@example.com"
+name: "John Doe"
+pantries: ["kitchenPantry1", "officeSnacks2"]
+Pantries:
+pantryId: "kitchenPantry1"
+userId: "johndoe123"
+name: "Kitchen Pantry"
+items: ["milk1", "cereal2"]
+pantryId: "officeSnacks2"
+userId: "johndoe123"
+name: "Office Snacks"
+items: ["coffee3", "cookies4"]
+Items:
+itemId: "milk1"
+pantryId: "kitchenPantry1"
+name: "Milk"
+quantity: 1
+unit: "gallon"
+expiryDate: 2024-03-15
+itemId: "cereal2"
+pantryId: "kitchenPantry1"
+name: "Cereal"
+quantity: 2
+unit: "box"
+itemId: "coffee3"
+pantryId: "officeSnacks2"
+name: "Coffee"
+quantity: 1
+unit: "bag"
+itemId: "cookies4"
+pantryId: "officeSnacks2"
+name: "Cookies"
+quantity: 5
+unit: "pack"
+Firestore Operations
+Creating a User:
+Create a new document in the Users collection.
+Creating a Pantry:
+Create a new document in the Pantries collection.
+Add the userId to the pantries array in the corresponding user document.
+Adding an Item:
+Create a new document in the Items collection.
+Add the itemId to the items array in the corresponding pantry document.
+Benefits of Firestore
+Scalability: Firestore is designed to handle large amounts of data and users.
+Real-time Updates: Changes to data are reflected in real-time for all connected users.
+Offline Capabilities: Users can access data even when they're offline.
+Security: Firestore provides robust security rules to control access to data.
+Next Steps
+Choose a Development Environment: You can use the Firebase console, the Firebase CLI, or a programming language like JavaScript, Python, or Java to interact with Firestore.
+Set Up Your Project: Create a new Firebase project and enable Fire
