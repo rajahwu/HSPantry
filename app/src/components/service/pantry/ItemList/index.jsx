@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";
-import { deletePantryItem } from "../../lib/firebase";
+import { deletePantryItem } from "../../../../lib/firebase";
 
 const Button = ({ text, onClick }) => (
   <button onClick={onClick}>{text}</button>
