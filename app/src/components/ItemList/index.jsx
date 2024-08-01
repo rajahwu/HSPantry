@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
-import { deletePantryItem, getPantryItems } from "../../lib/firebase";
+import { useLoaderData } from "react-router-dom";
+import { deletePantryItem } from "../../lib/firebase";
 
 const Button = ({ text, onClick }) => (
   <button onClick={onClick}>{text}</button>
@@ -13,17 +13,8 @@ Button.propTypes = {
 };
 
 export default function ItemList() {
-  const [items, setItems] = useState([]);
+  const items = useLoaderData().pantryItems;
   let searchTerm = "";
-
-  const refreshItems = async () => {
-    const data = await getPantryItems();
-    setItems(data || []);
-  };
-
-  useEffect(() => {
-    refreshItems();
-  }, []);
 
   const filteredItems = items.filter((item) =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -45,7 +36,7 @@ export default function ItemList() {
                 {item.name}
               </Typography>
               <Button
-                onClick={() => deletePantryItem(item.id).then(refreshItems)}
+                onClick={() => deletePantryItem(item.id)}
                 text="Delete"
               />
             </Box>
