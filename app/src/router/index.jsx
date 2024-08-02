@@ -4,4 +4,4 @@ import { pantryItemsLoader } from './loaders';
 
 const router = createBrowserRouter([{ path: "/", element: <HomePage />, loader: pantryItemsLoader }]);
 
-export default router;
+export { router };

@@ -1,3 +1,5 @@
+// jsconfig.json is a configuration file that allows you to define the root files and the compiler options that require for the TypeScript compiler.
+
 {
   "compilerOptions": {
     "baseUrl": "./",
