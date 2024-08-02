@@ -1,4 +1,4 @@
-import AddPantryItemForm from "./AddPantryItemForm";
+import AddPantryItemForm from "./form/AddItemForm";
 import ItemList from "./ItemList";
 
 export {

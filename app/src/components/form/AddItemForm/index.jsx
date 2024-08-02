@@ -1,7 +1,7 @@
+import { addPantryItem } from "@lib/firebase";
 import { Box, Button, TextField } from "@mui/material";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { addPantryItem } from "../../../lib/firebase";
 
 export default function AddPantryItemForm({ refreshItems }) {
   const [item, setItem] = useState("");
