@@ -3,4 +3,7 @@ import { deletePantryItem } from './deletePantryItem';
 import { getPantryItems } from './getPantryItems';
 import { updatePantryItem } from './updatePantryItem';
 
-export { addPantryItem, deletePantryItem, getPantryItems, updatePantryItem };
+import { getPantries } from './pantry/getPantries';
+
+export { addPantryItem, deletePantryItem, getPantries, getPantryItems, updatePantryItem };
+
