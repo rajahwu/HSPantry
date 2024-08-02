@@ -1,5 +1,5 @@
 import AddPantryItemForm from "./form/AddItemForm";
-import ItemList from "./service/pantry/ItemList";
+import ItemList from "./services/pantry/ItemList";
 
 export {
     AddPantryItemForm,

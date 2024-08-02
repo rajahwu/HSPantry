@@ -1,4 +1,4 @@
-import { addPantryItem } from "@lib/firebase";
+import { addPantryItem } from "@lib/db";
 import { Box, Button, TextField } from "@mui/material";
 import PropTypes from "prop-types";
 import { useState } from "react";

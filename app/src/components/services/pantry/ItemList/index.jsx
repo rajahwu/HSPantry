@@ -1,4 +1,4 @@
-import { deletePantryItem } from "@lib/firebase";
+import { deletePantryItem } from "@lib/db";
 import { Box, Stack, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import { useLoaderData } from "react-router-dom";

@@ -1,4 +1,4 @@
-import { getPantryItems } from '../../lib/firebase';
+import { getPantryItems } from '../../lib/db';
 
 async function loader() {
     const pantryItems = await getPantryItems();
