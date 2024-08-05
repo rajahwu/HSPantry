@@ -1,4 +1,4 @@
 import ItemList from './ItemList';
-import Pantry from './Pantry';
+import PantryItems from './PantryItems';
 
-export { ItemList, Pantry };
+export { ItemList, PantryItems };

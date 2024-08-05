@@ -1,3 +1,3 @@
-import pantryItemsLoader from './pantryItemsLoader';
+import { pantryItemsLoader } from './pantryItemsLoader';
 
 export { pantryItemsLoader };

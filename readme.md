@@ -5,9 +5,7 @@ This repository is a skill demonstration project developed as part of the Headst
 ## Tech Stack
 
 - **Vite**: Fast development server and build tool.
-- **Vinxi**: Router and server framework for Vite.
 - **React**: JavaScript library for building user interfaces.
-- **React Query**: Data-fetching and state management for React.
 - **React Router**: Routing library for React.
 - **Firebase**: Backend-as-a-Service for data storage and authentication.
 - **TailwindCSS**: Utility-first CSS framework for styling.
